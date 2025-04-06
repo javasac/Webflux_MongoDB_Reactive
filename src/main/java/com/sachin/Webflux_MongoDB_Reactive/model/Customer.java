@@ -1,7 +1,6 @@
 package com.sachin.Webflux_MongoDB_Reactive.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.util.UUID;
 
 @Document
@@ -52,5 +51,14 @@ public class Customer
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.job = job;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", job='" + job + '\'' +
+                '}';
     }
 }

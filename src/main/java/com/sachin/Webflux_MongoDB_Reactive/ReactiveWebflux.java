@@ -11,11 +11,13 @@ import java.util.List;
 import java.util.Locale;
 
 public class ReactiveWebflux {
-    private Mono<String> testMono() {
+    private Mono<String> testMono()
+    {
         return Mono.just("Java").log();
     }
 
-    private Flux<String> testFlux() {
+    private Flux<String> testFlux()
+    {
         List<String> lang = List.of("Java", "C++", "Golang", "Python");
         return Flux.fromIterable(lang);
     }
